@@ -4,31 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
     <link rel="stylesheet" href="assets/css/login.css">
+    <title>Site | GB</title>
 </head>
 <body>
-    <a href="home.html">Voltar</a>
+   <a href="home.html">Voltar</a>
 
-
-    <h1>Login</h1>
-    
-    <form class="login" action="test.php"  method="POST">
-        
-        <div class="inputBox">
-            <input type="text" name="email" id="email" class="inputUser">
-           <label for="email" class="labelInput">Email</label>
-       </div><br>
-
-       <div class="inputBox">
-            <input type="password" name="senha" id="senha" class="inputUser">
-           <label for="senha" class="labelInput">Senha</label>
-       </div><br>
-
-
-
-       <input type="submit" name="submit" id="submit-button">
-    </form>
-
+   <div class="login">
+       
+       <form  action="testLogin.php" method="POST">
+   
+       <input type="text" name="email" placeholder="Nome">
+       <br>
+       <input type="passowrd" name="senha" placeholder="Senha">
+       <br><br>
+       <input class="inputSubmit" type="submit" name="submit" value="Enviar">
+       </form>
+   </div>
 </body>
 </html>
