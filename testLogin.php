@@ -11,10 +11,16 @@
         $email = $_POST['email'];
         $senha = $_POST['senha'];
         
-        print_r('Email: ' . $email);
-        print_r('<br>');
-        print_r('senha: ' . $senha);
 
+        $sql = "SELECT * FROM usuarios WHERE email = '$email' and senha = '$senha'";
+
+        $result = $conexao->query($sql);
+
+        if(mysqli_num_rows($result) <1) {
+            echo 'Não existe';
+        } else {
+            echo 'Existe!!!';
+        }
         
     }else {
         // NAO ACESSA
