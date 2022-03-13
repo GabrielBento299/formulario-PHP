@@ -34,7 +34,7 @@
 
         $nome = $_POST['nome'];
         $senha = $_POST['senha'];
-        $email = $_POST['email'];
+        $email = $_POST['email']; 
         $telefone = $_POST['telefone'];
         $sexo = $_POST['genero'];
         $data_nasc = date('d-m-y', strtotime($_POST['data_nascimento']));
