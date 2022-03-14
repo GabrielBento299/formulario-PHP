@@ -46,10 +46,10 @@
         VALUES ('$nome', '$senha', '$email', '$telefone', '$sexo', '$data_nasc', '$cidade', '$estado', '$endereco')");
 
         echo 'Deu tudo certo ' . $nome . ' Seu Formulario foi com sucesso!' ;
-    
+        
+        header('Location: login.html');
+
     
     }
-
-
     ?>
  

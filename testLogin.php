@@ -20,7 +20,8 @@ session_start();
         if(mysqli_num_rows($result) < 1) {
             unset($_SESSION['email']);
             unset($_SESSION['senha']);
-            header('Location: login.html');
+             header('Location: login.html');
+          
          }
          
          else {
@@ -32,6 +33,7 @@ session_start();
     }else {
         // NAO ACESSA
         header('Location: login.html');
+        exit;
     }
 
 ?>
