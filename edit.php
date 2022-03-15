@@ -29,6 +29,9 @@
             header('Location: sistema.php');
         }
      
+      } else {
+        header('Location: sistema.php');
+
       }
 
 
@@ -50,7 +53,7 @@
     <a href="sistema.php">Voltar</a>
 
         <div class="box">
-            <form action="formulario.php" method="POST">
+            <form action="saveEdit.php" method="POST">
                 <fieldset>
  
                     <legend>Editar seus dados </legend>
@@ -59,7 +62,7 @@
  
  
                     <div class="inputBox">
-                         <input type="text" name="nome" id="nome" class="inputUser" value=<?php echo $nome;?>>
+                         <input type="text" name="nome" id="nome" class="inputUser" value="<?php echo $nome;?>">
                         <label for="nome" class="labelInput">Nome Completo</label>
                     </div><br>
                     
@@ -116,8 +119,8 @@
                         <br>
 
                         
-                        
-                        <input type="submit" name="submit" id="submit-button">
+                        <input type="hidden" name="id" value="<?php echo $id ?>">
+                        <input type="submit" name="update" id="submit-button">
                          <br>  <br>
                            
                   </fieldset>

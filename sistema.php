@@ -71,8 +71,12 @@
                         echo "<td>" . $user_data['cidade'] . "</td>";
                         echo "<td>" . $user_data['estado'] . "</td>";
                         echo "<td>" . $user_data['endereco'] . "</td>";
-                        echo "<td><a href='edit.php?id=$user_data[id]'>               
+                        echo "<td>
+                            <a href='edit.php?id=$user_data[id]'>               
                             <i class='fab fa-youtube'></i>
+                         </a>
+                           <a href='delete.php?id=$user_data[id]'>        
+                           <i class='fab fa-twitter'></i>
                          </a>
                         </td>";                             
                     }
