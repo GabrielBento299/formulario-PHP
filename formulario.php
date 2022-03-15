@@ -37,7 +37,7 @@
         $email = $_POST['email']; 
         $telefone = $_POST['telefone'];
         $sexo = $_POST['genero'];
-        $data_nasc = date('d-m-y', strtotime($_POST['data_nascimento']));
+        $data_nasc = $_POST['data_nascimento'];
         $cidade = $_POST['cidade'];
         $estado = $_POST['estado'];
         $endereco = $_POST['endereco'];
@@ -47,7 +47,7 @@
 
         echo 'Deu tudo certo ' . $nome . ' Seu Formulario foi com sucesso!' ;
         
-        header('Location: login.html');
+        header('Location: login.php');
 
     
     }

@@ -11,7 +11,7 @@ body {
 
 header {
   padding: 20px;
-  background-color: red;
+  background-color: #ff003a;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -21,6 +21,23 @@ header {
 h1 {
   text-align: center;
   padding: 33px;
+}
+
+button {
+  padding: 13px 33px;
+  background-color: orange;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+}
+button:hover {
+  filter: brightness(1.1);
+}
+
+a {
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
 }
 
 table {
@@ -41,11 +58,11 @@ tr,
 td {
   border-collapse: collapse;
   padding: 22px;
-  background-color: #ee4;
+  background-color: #ffdc00;
   margin: 25px 0;
 }
 .styled-table thead tr {
-  background-color: #009879;
+  background-color: #239b56;
   color: #333;
   font-size: 23px;
   font-weight: bold;
@@ -53,12 +70,19 @@ td {
 }
 
 .styled-table thead td {
-  color: white;
+  color: brown;
   font-size: 18px;
   font-weight: 600;
-  text-align: left;
+  text-align: center;
 }
 .styled-table th,
 .styled-table td {
   padding: 12px 15px;
+}
+
+.fa-youtube {
+  background-color: cornflowerblue;
+  border-radius: 12px;
+  padding: 13px;
+  color: white;
 }

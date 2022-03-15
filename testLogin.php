@@ -11,7 +11,7 @@ session_start();
 
         $email = $_POST['email'];
         $senha = $_POST['senha'];
-        
+         
 
         $sql = "SELECT * FROM usuarios WHERE email = '$email' and senha = '$senha'";
 
@@ -20,8 +20,8 @@ session_start();
         if(mysqli_num_rows($result) < 1) {
             unset($_SESSION['email']);
             unset($_SESSION['senha']);
-             header('Location: login.html');
-          
+            header('Location: login.php');
+           
          }
          
          else {
@@ -32,8 +32,9 @@ session_start();
         
     }else {
         // NAO ACESSA
-        header('Location: login.html');
-        exit;
+        header('Location: login.php');
+          exit;
+      
     }
 
 ?>

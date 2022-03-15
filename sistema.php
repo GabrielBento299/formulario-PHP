@@ -10,7 +10,7 @@
      }  
 
     $logado = $_SESSION['email'];
-
+ 
     $sql = "SELECT * FROM usuarios ORDER BY id DESC";
 
     $result = $conexao->query($sql);
@@ -25,16 +25,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/sistema.css">
-    
-    <title>Document</title>
+     <title>Document</title>
+     <script src="https://kit.fontawesome.com/54b7b426e0.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <header>
         <h2>LOGO</h2> 
-        <a href="sair.php">Sair</a>
+         <button><a href="sair.php">Sair</a></button>
      </header>
 
-     <?php echo "<h1>Bem vindo <u>$logado</u></h1>";
+     <?php echo "<h1>Bem vindo <u>$logado </u></h1>";
       ?>
 
      <section class="table">
@@ -56,6 +57,7 @@
                 <th scope="col">...</th>
                 </tr>   
             </tbody>
+
                 <?php 
                     while($user_data = mysqli_fetch_assoc($result)){
                     echo "<tr>";
@@ -69,10 +71,13 @@
                         echo "<td>" . $user_data['cidade'] . "</td>";
                         echo "<td>" . $user_data['estado'] . "</td>";
                         echo "<td>" . $user_data['endereco'] . "</td>";
-                            echo "<td>ações</td>";    
-                    echo "</tr>";
+                        echo "<td><a href='edit.php?id=$user_data[id]'>               
+                            <i class='fab fa-youtube'></i>
+                         </a>
+                        </td>";                             
                     }
                 ?>
+            
             </table>
      </section>
 
